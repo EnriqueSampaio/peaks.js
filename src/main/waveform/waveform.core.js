@@ -135,13 +135,13 @@
         return;
       }
 
-      if (this.status !== 200) {
-        self.handleRemoteData(
-          new Error('Unable to fetch remote data. HTTP status ' + this.status)
-        );
+      // if (this.status !== 200) {
+      //   self.handleRemoteData(
+      //     new Error('Unable to fetch remote data. HTTP status ' + this.status)
+      //   );
 
-        return;
-      }
+      //   return;
+      // }
 
       if (builder) {
         webaudioBuilder(
