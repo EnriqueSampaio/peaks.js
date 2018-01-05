@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bbc/peaks.js.git"
+    "url": "git://github.com/EnriqueSampaio/peaks.js.git"
   },
   "license": "LGPL-3.0",
   "engines": {

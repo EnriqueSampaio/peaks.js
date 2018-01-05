@@ -1,4 +1,6 @@
 bower_components
-# node_modules
-# peaks.js
-# peaks.js.map
+docs
+node_modules
+index.js
+peaks.js
+peaks.js.map
