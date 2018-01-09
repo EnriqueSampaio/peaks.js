@@ -22383,7 +22383,7 @@ module.exports = function (WaveformData, webaudioBuilder, WaveformOverview, Wave
         }
         if (!options.dataUri && options.audioContext) {
             requestType = 'arraybuffer';
-            uri = options.mediaElement.currentSrc || options.mediaElement.src;
+            uri = options.blobUrl || options.mediaElement.currentSrc || options.mediaElement.src;
             builder = webaudioBuilder;
         }
         if (!uri) {
