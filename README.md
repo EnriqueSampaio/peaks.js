@@ -153,6 +153,9 @@ var options = {
   // HTML5 Media element containing an audio track
   mediaElement: document.querySelector('audio'),
 
+  // URL to audio blob
+  blobUrl: URL.createObjectURL(blob),
+
   /** Optional config with defaults **/
   // URI to waveform data file in binary or JSON
   dataUri: {
