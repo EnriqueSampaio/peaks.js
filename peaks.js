@@ -20738,6 +20738,9 @@ module.exports = function (Colors, EventEmitter, WaveformPoints, WaveformSegment
         if (!opts.container) {
             throw new Error('Peaks.init(): Missing container option');
         }
+        if (opts.container.clientWidth > 0 === false) {
+            throw new TypeError('Peaks.init(): Please ensure that the container has a width');
+        }
         if (opts.logger && !Utils.isFunction(opts.logger)) {
             throw new TypeError('Peaks.init(): The logger option should be a function');
         }
@@ -21788,7 +21791,7 @@ module.exports = function (PlayheadLayer, PointsLayer, SegmentsLayer, MouseDragH
         self.container = container;
         self.peaks = peaks;
         self.options = peaks.options;
-        self.width = self.options.width;
+        self.width = container.clientWidth;
         self.height = container.clientHeight || self.options.height;
         self.frameOffset = 0;
         self.data = waveformData.resample(self.width);
@@ -21973,7 +21976,7 @@ module.exports = function (WaveformAxis, mixins, Utils, PlayheadLayer, PointsLay
         self.intermediateData = null;
         var initialZoomLevel = self.options.zoomLevels[peaks.zoom.getZoom()];
         self.resampleData(initialZoomLevel);
-        self.width = self.options.width;
+        self.width = container.clientWidth;
         self.height = container.clientHeight || self.options.height;
         self.frameOffset = 0;
         self.stage = new Konva.Stage({
