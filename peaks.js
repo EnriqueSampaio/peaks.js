@@ -20738,9 +20738,6 @@ module.exports = function (Colors, EventEmitter, WaveformPoints, WaveformSegment
         if (!opts.container) {
             throw new Error('Peaks.init(): Missing container option');
         }
-        if (opts.container.width > 0 === false) {
-            throw new TypeError('Peaks.init(): Please ensure that the container has a width');
-        }
         if (opts.logger && !Utils.isFunction(opts.logger)) {
             throw new TypeError('Peaks.init(): The logger option should be a function');
         }
