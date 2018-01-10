@@ -285,10 +285,10 @@ define('peaks', [
       throw new Error('Peaks.init(): Missing container option');
     }
 
-    if ((opts.container.clientWidth > 0) === false) {
-      // eslint-disable-next-line max-len
-      throw new TypeError('Peaks.init(): Please ensure that the container has a width');
-    }
+    // if ((opts.container.clientWidth > 0) === false) {
+    //   // eslint-disable-next-line max-len
+    //   throw new TypeError('Peaks.init(): Please ensure that the container has a width');
+    // }
 
     if (opts.logger && !Utils.isFunction(opts.logger)) {
       // eslint-disable-next-line max-len
