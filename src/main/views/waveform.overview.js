@@ -45,7 +45,7 @@ define([
     self.peaks = peaks;
 
     self.options = peaks.options;
-    self.width = container.clientWidth;
+    self.width = container.width;
     self.height = container.clientHeight || self.options.height;
 
     self.frameOffset = 0;
