@@ -21973,7 +21973,7 @@ module.exports = function (WaveformAxis, mixins, Utils, PlayheadLayer, PointsLay
         self.intermediateData = null;
         var initialZoomLevel = self.options.zoomLevels[peaks.zoom.getZoom()];
         self.resampleData(initialZoomLevel);
-        self.width = container.clientWidth;
+        self.width = self.options.width;
         self.height = container.clientHeight || self.options.height;
         self.frameOffset = 0;
         self.stage = new Konva.Stage({
